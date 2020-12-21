@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {%include './layout/nav.html' %} {% include './layout/main.html'%}
+    <link rel="stylesheet" href="{% static 'faq/css/style.css'%}" />
+
+    <title>StudyBusiness – The Team</title>
+  </head>
+
+  <body>
+    <div class="container mt-4 mb-2 pr-2 pl-2">
+      <h2 class="title f-2r">FAQ – Make our days with your questions</h2>
+      <p class="subtitle mt-3">Post a comment</p>
+      <div class="comments">
+        <div class="new-comment">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img
+                  src="https://cdn.discordapp.com/avatars/324920582665928727/295f084863a55aca48ada0e46d919633.png?size=128"
+                />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="field">
+                <p class="control">
+                  <textarea
+                    class="textarea"
+                    placeholder="Add a comment..."
+                  ></textarea>
+                </p>
+              </div>
+              <nav class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <a class="button is-light">Post comment</a>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </article>
+        </div>
+        <br /><br />
+        <p class="subtitle">Previous comments</p>
+        <div class="comment">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/128x128.png" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>Barbara Middleton</strong>
+                  <br />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  porta eros lacus, nec ultricies elit blandit non. Suspendisse
+                  pellentesque mauris sit amet dolor blandit rutrum. Nunc in
+                  tempus turpis.
+                  <br />
+                  <small class="has-text-grey"> 3 hrs ago</small>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div><div class="comment">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/128x128.png" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>Barbara Middleton</strong>
+                  <br />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  porta eros lacus, nec ultricies elit blandit non. Suspendisse
+                  pellentesque mauris sit amet dolor blandit rutrum. Nunc in
+                  tempus turpis.
+                  <br />
+                  <small class="has-text-grey"> 3 hrs ago</small>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div><div class="comment">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/128x128.png" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>Barbara Middleton</strong>
+                  <br />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  porta eros lacus, nec ultricies elit blandit non. Suspendisse
+                  pellentesque mauris sit amet dolor blandit rutrum. Nunc in
+                  tempus turpis.
+                  <br />
+                  <small class="has-text-grey"> 3 hrs ago</small>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div><div class="comment">
+          <article class="media">
+            <figure class="media-left">
+              <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/128x128.png" />
+              </p>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <p>
+                  <strong>Barbara Middleton</strong>
+                  <br />
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                  porta eros lacus, nec ultricies elit blandit non. Suspendisse
+                  pellentesque mauris sit amet dolor blandit rutrum. Nunc in
+                  tempus turpis.
+                  <br />
+                  <small class="has-text-grey"> 3 hrs ago</small>
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    {% include './layout/footer.html' %}
+  </body>
+</html>

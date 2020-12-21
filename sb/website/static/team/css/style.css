@@ -1,0 +1,19 @@
+body {
+    height: 100vh;
+}
+
+    footer, footer.footer {
+    position: absolute !important;
+}
+
+.is-round {
+    border-radius: 2rem;
+}
+
+is-round-50 {
+    border-radius: 50%;
+}
+
+article.tile.is-child.notification.is-light > p.title {
+    font-weight: 400 !important;
+}
