@@ -25,7 +25,7 @@ SECRET_KEY = 'aip6480j_l9!d(f)g#8@8^#(mfydxdl)l)yl@-s-cv^*pj6pgz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["172.105.63.20", "www.studybusiness.info", "studybusiness.info"]
+ALLOWED_HOSTS = ["172.105.63.20","127.0.0.1", "www.studybusiness.info", "studybusiness.info"]
 
 
 # Application definition
