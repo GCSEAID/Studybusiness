@@ -20,3 +20,6 @@ def carbolt(request):
     
 def businessHome(request):
     return render(request, 'business.html')
+
+def definitions(request):
+    return render(request, "definitions.html")

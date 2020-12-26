@@ -26,4 +26,5 @@ urlpatterns = [
     path("carbolt/", views.carbolt),
     path("sub/business/", views.businessHome),
     path('admin/', admin.site.urls),
+    path('def/', views.definitions)
 ]
