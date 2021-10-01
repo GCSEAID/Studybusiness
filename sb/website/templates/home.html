@@ -1,0 +1,64 @@
+{% load static %}
+<html>
+
+<head>
+    <title>Home – StudyBusiness</title>
+    {%include './layout/nav.html' %} {% include './layout/main.html'%}
+</head>
+
+<body>
+    <section class="hero is-medium is-bold section-a one">
+        <div class="hero-body">
+            <h1 class="title is-spaced center-align">
+                Welcome To StudyBusiness!
+            </h1>
+            <h2 class="subtitle is-spaced center-align">
+                The place where you can learn all about GCSE business to ace your exams.
+            </h2>
+
+            
+            <div class="container">
+                <div class="grid-container container">
+                    <div class="subjects">
+                        <h1 class="grid-item grid-item-title">What can we provide?</h1>
+                        <ul class="grid-item grid-item-ul">
+
+                            <a href="/sub/business">
+                                <li>Business Studies</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="feats">
+                        <h1 class="grid-item grid-item-title">What we offer?</h1>
+                        <ul class="grid-item grid-item-ul">
+                            <li class="grid-item grid-item-li">Question papers</li>
+                            <li class="grid-item grid-item-li">Notes</li>
+                            <li class="grid-item grid-item-li">Videos</li>
+                            <li class="grid-item grid-item-li">Exam Tips</li>
+                            <li class="grid-item grid-item-li">Exam Techniques</li>
+                            <li class="grid-item grid-item-li">And more!</li>
+                        </ul>
+                    </div>
+                    <div class="aboutus">
+                        <h1 class="grid-item grid-item-title">Who are we?</h1>
+                        <ul class="grid-item grid-item-ul">
+                            <p>We are students who are here to provide free resources to ensure your success.</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Hero footer: will stick at the bottom -->
+    {% include './layout/footer.html' %}
+
+    <!-- <script>
+        function opennav() {
+            var e = document.getElementById(r.dataset.target);
+            r.classList.toggle("is-active"), e.classList.toggle("is-active")
+        }
+    </script> -->
+    <script src="{% static 'public/js/main.js' %}"></script>
+</body>
+
+</html>
