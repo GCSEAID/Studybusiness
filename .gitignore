@@ -1,1 +1,5 @@
-echo .env > .gitignore
+.env
+./my_env
+./screenlog.0
+.git
+
