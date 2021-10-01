@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {%include './layout/nav.html' %} {% include './layout/main.html' %}
+    <link rel="stylesheet" href="{% static 'resources/css/style.css' %}">
+    
+    <title>StudyBusiness – Resources</title>
+</head>
+
+<body>
+    <div class="container mt-4 mb-4">
+        <h2 class="title f-2r">These resources made this website possible</h2>
+        <div class="content">
+            <ul>
+                <li><a href="https://bulma.io/">   Bulma.io | A delightful css framework</a></li>
+                <li><a href="https://fontawesome.com/">   Fontawesome | A splendiferous icon provider</a></li>
+                <li><a href="https://jquery.com/">   JQuery | A sweet library that made all our cool features a thing</a></li>
+                <li><a href="https://designevo.com/">   DesignEvo | A fabulous free logo maker</a></li>
+        </ul>
+    </div>
+    </div>
+    {% include './layout/footer.html' %}
+</body>
+
+</html>
