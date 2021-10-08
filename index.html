@@ -11,7 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <!-- == Fontawesome 5 == -->
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/GCSEAID/Studybusiness/dev/website/static/public/images/logo.png" type="image/x-icon">
-<!--end of Meta data -->
+    <!--end of Meta data -->
     
   
     <!--Navigation bar-->
@@ -51,8 +51,8 @@
 </head>
 
 <body>
-    <section class="hero is-medium is-bold section-a one">
-        <div class="hero-body">
+    <div class="is-medium is-bold">
+        <div>
             <h1 class="title is-spaced center-align">
                 Welcome To StudyBusiness!
             </h1>
@@ -99,25 +99,14 @@
                 <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
             </div>
         </footer>
-    <!-- <script>
+    <script>
         function opennav() {
             var e = document.getElementById(r.dataset.target);
             r.classList.toggle("is-active"), e.classList.toggle("is-active")
         }
-    </script> -->
+    </script>
     <script>
-        Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"),0).forEach((function(r){r.addEventListener("click",(function(){var e=document.getElementById(r.dataset.target);r.classList.toggle("is-active"),e.classList.toggle("is-active")}))}));
-    
-       /* [ uses jquery so for later ]
-       
-       $(function(){   
-            $("#meta-placeholder").load("HTML/layout/main.html");
-        }); 
-        
-        $(function(){
-            $("#nav-placeholder").load("HTML/layout/nav.html");
-        });
-       */
+        // Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"),0).forEach((function(r){r.addEventListener("click",(function(){var e=document.getElementById(r.dataset.target);r.classList.toggle("is-active"),e.classList.toggle("is-active")}))}));
        </script>
 </body>
 

@@ -29,7 +29,7 @@ body,
 }
 body {
   background: linear-gradient(180deg, #fff 0, #abeffb 100%) !important;
-  height: auto;
+  height: 100vh;
 }
 nav.navbar {
   background: var(--white) !important;
@@ -83,12 +83,20 @@ section {
   overflow: auto;
   height: 100vh;
 }
-footer,
+/* footer,
 footer.footer {
   padding: 1rem 1em 1rem;
   bottom: 0;
   position: relative;
   width: 100%;
+} */
+footer,
+footer.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding: 1rem 1em 1rem;
+    /* height:60px;   Height of the footer */
 }
 .nav-logo {
   width: 112px;
@@ -124,12 +132,16 @@ div.hero-body > h2.subtitle.is-spaced.center-align {
   padding-top: 0;
 }
 .grid-container {
+  width: 80em;
   display: inline-grid;
   grid-template-columns: minmax(5rem, 40%) 1fr 1fr;
   padding: 1rem;
   grid-gap: 1rem;
-  box-shadow: -7px 5px 16px 0 #61e6ff;
-  border: 1px solid #b1b1b1;
+  /* box-shadow: -7px 5px 16px 0 #61e6ff; */
+  /* border: 1px solid #b1b1b1; */
+  background: #fdffff;
+  border-radius: 6px 6px 0px 0px;
+  border: 3px solid #3273dc;
 }
 .grid-item-ul {
   list-style-type: inherit;
