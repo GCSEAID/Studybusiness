@@ -1,6 +1,7 @@
 <!DOCTYPE html>  <!--Meta Data -->
     <link rel="stylesheet" href="static/public/css/bulma.min.css">
     <link rel="stylesheet" href="static/public/css/main.css">
+    <link rel="stylesheet" href="static/cases/css/style.css">
     <!-- == Fontawesome 5 == -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
@@ -176,9 +177,18 @@
       <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
   </div>
 </footer>
-
-<script>
+    <script>
         Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"),0).forEach((function(r){r.addEventListener("click",(function(){var e=document.getElementById(r.dataset.target);r.classList.toggle("is-active"),e.classList.toggle("is-active")}))}));
-</script>
-
+    
+       /* [ uses jquery so for later ]
+       
+       $(function(){   
+            $("#meta-placeholder").load("HTML/layout/main.html");
+        }); 
+        
+        $(function(){
+            $("#nav-placeholder").load("HTML/layout/nav.html");
+        });
+       */
+       </script>
 </html>
