@@ -14,7 +14,7 @@
     <!--end of Meta data -->
     
   
-    <!--Navigation bar-->
+<!--Navigation bar-->
     <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
@@ -35,10 +35,20 @@
                     <a href="index.html" class="navbar-item">
                         Home
                     </a>
-                    <a href="business.html" class="navbar-item">
-                        Business
-                    </a>
-                </div>
+                
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="business.html" class="navbar-link">
+                            Business
+                        </a>
+                        <div class="navbar-dropdown">
+                                <div class="dropdown-trigger navbar-item">
+                                    <a href="cases.html" class="navbar-item">Cases</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+                                </div>  
+                                <div class="dropdown-trigger navbar-item">
+                                    <a href="definitions.html" class="navbar-item">Definitions</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+                                </div>
+
+                </div>  </div>
             </div>
         </div>
     </nav>
@@ -57,7 +67,7 @@
                 Welcome To StudyBusiness!
             </h1>
             <h2 class="subtitle is-spaced center-align">
-                The place where you can learn all about GCSE business to ace your exams.
+                The place where you can learn all about IGCSE business to ace your exams.
             </h2>
 
             
@@ -75,39 +85,35 @@
                     <div class="feats">
                         <h1 class="grid-item grid-item-title">What we offer?</h1>
                         <ul class="grid-item grid-item-ul">
-                            <li class="grid-item grid-item-li">Question papers</li>
-                            <li class="grid-item grid-item-li">Notes</li>
-                            <li class="grid-item grid-item-li">Videos</li>
-                            <li class="grid-item grid-item-li">Exam Tips</li>
-                            <li class="grid-item grid-item-li">Exam Techniques</li>
-                            <li class="grid-item grid-item-li">And more!</li>
+                            <li class="grid-item grid-item-li">IGCSE Business Definitions Document</li>
+                            <li class="grid-item grid-item-li">Cases Studies with questions</li>
                         </ul>
                     </div>
-                    <div class="aboutus">
+<!--                    <div class="aboutus">
                         <h1 class="grid-item grid-item-title">Who are we?</h1>
                         <ul class="grid-item grid-item-ul">
                             <p>We are students who are here to provide free resources to ensure your success.</p>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
     </section>
 
-    <!-- Hero footer: will stick at the bottom -->
-       <footer class="footer">
-            <div class="content has-text-centered">
-                <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
-            </div>
-        </footer>
-    <script>
+
+    <!-- <script>
         function opennav() {
             var e = document.getElementById(r.dataset.target);
             r.classList.toggle("is-active"), e.classList.toggle("is-active")
         }
-    </script>
-    <script>
-        // Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"),0).forEach((function(r){r.addEventListener("click",(function(){var e=document.getElementById(r.dataset.target);r.classList.toggle("is-active"),e.classList.toggle("is-active")}))}));
-       </script>
+    </script> -->
+    <script>Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"),0).forEach((function(r){r.addEventListener("click",(function(){var e=document.getElementById(r.dataset.target);r.classList.toggle("is-active"),e.classList.toggle("is-active")}))}));       </script>
+    
+    <!-- Hero footer: will stick at the bottom -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
+        </div>
+    </footer>
+    
 </body>
-
 </html>

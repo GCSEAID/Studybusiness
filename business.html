@@ -16,34 +16,47 @@
       <!--end of Meta data -->
       
     
-      <!--Navigation bar-->
-      <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item noselect" href="index.html">
-                    <img class="nodrag nav-logo" src="https://raw.githubusercontent.com/GCSEAID/Studybusiness/dev/static/public/images/logotext.png" draggable="false">
+<!--Navigation bar-->
+<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item noselect" href="index.html">
+                <img class="nodrag nav-logo" src="https://raw.githubusercontent.com/GCSEAID/Studybusiness/dev/static/public/images/logotext.png" draggable="false">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a href="index.html" class="navbar-item">
+                    Home
                 </a>
-    
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-    
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a href="index.html" class="navbar-item">
-                        Home
-                    </a>
-                    <a href="business.html" class="navbar-item">
+            
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a href="business.html" class="navbar-link">
                         Business
                     </a>
-                </div>
-            </div>
+                    <div class="navbar-dropdown">
+                            <div class="dropdown-trigger navbar-item">
+                                <a href="cases.html" class="navbar-item">Cases</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+                            </div>  
+                            <div class="dropdown-trigger navbar-item">
+                                <a href="definitions.html" class="navbar-item">Definitions</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+
+            </div>  </div>
         </div>
-    </nav>
+    </div>
+</nav>
+
+
+<!--end of Navigation bar-->
     
     <title>Business – Home</title>
 
@@ -99,11 +112,12 @@
 
         
     </div>
-    <footer class="footer">
+</body>
+
+<footer class="footer">
     <div class="content has-text-centered">
         <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
     </div>
 </footer>
-</body>
 
 </html>

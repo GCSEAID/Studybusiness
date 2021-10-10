@@ -87,7 +87,7 @@ section {
 footer.footer {
   padding: 1rem 1em 1rem;
   bottom: 0;
-  position: relative;
+  position: absolute;
   width: 100%;
 } */
 footer,

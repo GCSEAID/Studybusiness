@@ -16,8 +16,8 @@
 <!--end of Meta data -->
   
 
-  <!--Navigation bar-->
-  <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+ <!--Navigation bar-->
+ <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item noselect" href="index.html">
@@ -37,13 +37,26 @@
                 <a href="index.html" class="navbar-item">
                     Home
                 </a>
-                <a href="business.html" class="navbar-item">
-                    Business
-                </a>
-            </div>
+            
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a href="business.html" class="navbar-link">
+                        Business
+                    </a>
+                    <div class="navbar-dropdown">
+                            <div class="dropdown-trigger navbar-item">
+                                <a href="cases.html" class="navbar-item">Cases</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+                            </div>  
+                            <div class="dropdown-trigger navbar-item">
+                                <a href="definitions.html" class="navbar-item">Definitions</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+                            </div>
+
+            </div>  </div>
         </div>
     </div>
 </nav>
+
+
+<!--end of Navigation bar-->
 
     <title>StudyBusiness – Business – Case studies – Carbolt Mineral Ltd </title>
     
@@ -321,12 +334,11 @@
         </div>
 
     </div>
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
-        </div>
-    </footer>
     <script>document.onload(makeAccWork());</script>
 </body>
-
+<footer class="footer">
+    <div class="content has-text-centered">
+        <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
+    </div>
+</footer>
 </html>
