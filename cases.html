@@ -1,4 +1,8 @@
-<!DOCTYPE html>  <!--Meta Data -->
+<!DOCTYPE html>
+<title>StudyBusiness – Case Studies</title>
+
+
+  <!--Meta Data -->
     <link rel="stylesheet" href="static/public/css/bulma.min.css">
     <link rel="stylesheet" href="static/public/css/main.css">
     <link rel="stylesheet" href="static/cases/css/style.css">
@@ -9,7 +13,6 @@
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/GCSEAID/Studybusiness/dev/website/static/public/images/logo.png" type="image/x-icon">
 <!--end of Meta data -->
     
-  
     <!--Navigation bar-->
     <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
       <div class="container">
@@ -31,24 +34,28 @@
                   <a href="index.html" class="navbar-item">
                       Home
                   </a>
-                  <a href="business.html" class="navbar-item">
-                      Business
-                  </a>
-              </div>
+              
+                  <div class="navbar-item has-dropdown is-hoverable">
+                      <a href="business.html" class="navbar-link">
+                          Business
+                      </a>
+                      <div class="navbar-dropdown">
+                              <div class="dropdown-trigger navbar-item">
+                                  <a href="cases.html" class="navbar-item">Cases</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+                              </div>  
+                              <div class="dropdown-trigger navbar-item">
+                                  <a href="definitions.html" class="navbar-item">Definitions</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+                              </div>
+              </div>  </div>
           </div>
       </div>
   </nav>
   
-
-<html lang="en">
-
-<head>
   
     
 
 <!--end of Navigation bar-->
 
-  <title>StudyBusiness – Case Studies</title>
 </head>
 
 <body>
@@ -169,26 +176,14 @@
 
   </div>
   -->
-
-</body>
+</div>
+</div>
 
 <footer class="footer">
   <div class="content has-text-centered">
       <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
   </div>
 </footer>
-    <script>
-        Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"),0).forEach((function(r){r.addEventListener("click",(function(){var e=document.getElementById(r.dataset.target);r.classList.toggle("is-active"),e.classList.toggle("is-active")}))}));
-    
-       /* [ uses jquery so for later ]
-       
-       $(function(){   
-            $("#meta-placeholder").load("HTML/layout/main.html");
-        }); 
-        
-        $(function(){
-            $("#nav-placeholder").load("HTML/layout/nav.html");
-        });
-       */
-       </script>
+</body>
+    <script>Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"),0).forEach((function(r){r.addEventListener("click",(function(){var e=document.getElementById(r.dataset.target);r.classList.toggle("is-active"),e.classList.toggle("is-active")}))}));       </script>
 </html>
