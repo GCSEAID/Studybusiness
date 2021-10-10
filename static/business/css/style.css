@@ -1,3 +1,11 @@
 .grid-container {
     margin: 1rem;
 }
+
+footer,
+footer.footer {
+  padding: 1rem 1em 1rem;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
