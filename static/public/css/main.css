@@ -137,7 +137,10 @@ div.hero-body > h2.subtitle.is-spaced.center-align {
   padding-top: 0;
 }
 .grid-container {
-  width: auto;
+  width: 100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
   display: inline-grid;
   grid-template-columns: minmax(5rem, 40%) 1fr 1fr;
   padding: 1rem;
