@@ -137,6 +137,10 @@ div.hero-body > h2.subtitle.is-spaced.center-align {
   padding-top: 0;
 }
 
+.home_table {
+  padding: 1%;
+}
+
 .grid-container {
   display: inline-grid;
   text-align: left;
