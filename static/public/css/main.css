@@ -136,9 +136,12 @@ div.hero-body > h2.subtitle.is-spaced.center-align {
 .navbar-menu {
   padding-top: 0;
 }
+
+
 .grid-container {
-  width: auto;
   display: inline-grid;
+  text-align: left
+  ;
   grid-template-columns: minmax(5rem, 40%) 1fr 1fr;
   padding: 1rem;
   grid-gap: 1rem;
@@ -157,6 +160,7 @@ div.hero-body > h2.subtitle.is-spaced.center-align {
 .grid-item-title {
   font-size: calc(11px + (16 - 11) * (100vw - 400px) / (800 - 400)) !important;
   margin-bottom: 0;
+  
 }
 .f-16 {
   font-size: 16px !important;
