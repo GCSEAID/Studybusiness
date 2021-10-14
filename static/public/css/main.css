@@ -38,6 +38,10 @@ nav.navbar {
 section {
   height: 5000px;
 }
+.def_block {
+  text-align: center;
+}
+
 .logo-text-color {
   color: linear-gradient(90deg, #4c96d7, #083b66);
 }
@@ -96,6 +100,7 @@ footer.footer {
     bottom:0;
     width:100%;
     padding: 1rem 1em 1rem;
+    display: block;
     /* height:60px;   Height of the footer */
 }
 .nav-logo {
@@ -255,4 +260,17 @@ a.navbar-item:hover {
 }
 .dropdown.is-hoverable.is-drop-right {
   width: 100% !important;
+}
+
+.def_block_sub {
+  font-weight: bold;
+  font-size: x-large;
+  padding: 1%;
+}
+
+.def_emb {
+  align-items: center;
+  width: 80%;
+  height: 500px;   
+  padding: 1%;
 }

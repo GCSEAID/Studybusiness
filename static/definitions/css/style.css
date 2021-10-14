@@ -2,6 +2,7 @@ footer,
 footer.footer {
   padding: 1rem 1em 1rem;
   bottom: 0;
+  display: inline;
   position: absolute;
   width: 100%;
 }
