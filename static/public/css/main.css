@@ -139,6 +139,10 @@ div.hero-body > h2.subtitle.is-spaced.center-align {
 
 
 .grid-container {
+  width: 100%;
+  width: -moz-available;          /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
   display: inline-grid;
   text-align: left
   ;
