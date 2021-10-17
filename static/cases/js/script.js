@@ -18,7 +18,7 @@ for (var i=0; i < ans.length;i++) {
   console.log(url)
  navigator.clipboard.writeText(url);
     
-    if (notif.classList.has("hidden")) {
+    if (notif.classList.contains("hidden")) {
         notif.classList.remove("hidden")
         notif.classList.add("show-me")
     } else {
