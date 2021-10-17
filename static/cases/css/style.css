@@ -13,13 +13,6 @@
 
  }
 
-footer,
-footer.footer {
-  padding: 1rem 1em 1rem;
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-}
 
 .hidden {
     opacity: 0;
