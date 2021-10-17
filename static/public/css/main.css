@@ -29,7 +29,6 @@ body,
 }
 body {
   background: linear-gradient(180deg, #fff 0, #abeffb 100%) !important;
-  height: 100vh;
 }
 nav.navbar {
   background: var(--white) !important;
@@ -284,5 +283,8 @@ a.navbar-item:hover {
 .submit_button {
   width: 20%;
   align-self: center;
-  padding: 0.5%;
+}
+
+.case_studies_template {
+  padding-bottom: 100px;
 }
