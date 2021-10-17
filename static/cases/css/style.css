@@ -20,3 +20,12 @@ footer.footer {
   position: absolute;
   width: 100%;
 }
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.show-me {
+    opacity: 1;
+}
