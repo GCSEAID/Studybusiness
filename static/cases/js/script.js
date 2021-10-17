@@ -15,4 +15,5 @@ for (var i=0; i < ans.length;i++) {
 
 }
   console.log(url)
+ navigator.clipboard.writeText(url);
 }
