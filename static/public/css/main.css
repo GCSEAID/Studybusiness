@@ -96,7 +96,7 @@ footer.footer {
 } */
 footer,
 footer.footer {
-    position:absolute;
+    position: fixed;
     bottom:0;
     width:100%;
     padding: 1rem 1em 1rem;
@@ -279,4 +279,10 @@ a.navbar-item:hover {
   width: 80%;
   height: 500px;   
   padding: 1%;
+}
+
+.submit_button {
+  width: 20%;
+  align-self: center;
+  padding: 0.5%;
 }
