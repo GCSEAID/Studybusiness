@@ -2,6 +2,7 @@ var ans = document.getElementsByClassName("question")
 var urlSearchParams = new URLSearchParams(window.location.search);
 var params = Object.fromEntries(urlSearchParams.entries());
 var url = `${window.location.protocol}//${window.location.host}/answers.html/?`
+var notif = document.getElementById("notif");
 
 // console.log(a.concat("/?","q1=","test"))
 
@@ -16,4 +17,12 @@ for (var i=0; i < ans.length;i++) {
 }
   console.log(url)
  navigator.clipboard.writeText(url);
+    
+    if(notif.classList.has("hidden")) {
+        notif.classList.remove("hidden")
+        notif.classList.add("show-me")
+    }else
+        notif.classList.remove("show-me")
+        notif.classList.add("hidden")
+    }
 }
