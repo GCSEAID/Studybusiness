@@ -7,26 +7,23 @@ var notif = document.getElementById("notif");
 // console.log(a.concat("/?","q1=","test"))
 
 console.log(params); // object of all querys
-    var db = false
+var db = false
 
 
-var db= false
+var db = false
+
 function save() {
-if (db == false) {
-for (var i=0; i < ans.length;i++) {
-    var count = i + 1;
     if (db == false) {
-        url = url.concat(`q${count}=`,ans[i].value,"&")
-        url.slice(0,-1)
+        for (var i = 0; i < ans.length; i++) {
+            var count = i + 1;
+            if (db == false) {
+                url = url.concat(`q${count}=`, ans[i].value, "&")
+                url.slice(0, -1)
+            }
+        }
+        console.log(url)
+        navigator.clipboard.writeText(url);
+        setTimeout(notif.classList.remove("hidden"), 10);
     }
-}
-  console.log(url)
- navigator.clipboard.writeText(url);
-    
-    if (notif.classList.contains("hidden")) {
-        notif.classList.remove("hidden")
-        setTimeout(notif.classList.add("show-me"), 10);
-    } 
-}
-db= true
+    db = true
 }
