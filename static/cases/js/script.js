@@ -7,7 +7,6 @@ var notif = document.getElementById("notif");
 // console.log(a.concat("/?","q1=","test"))
 
 console.log(params); // object of all querys
-var db = false
 
 
 var db = false
@@ -23,7 +22,13 @@ function save() {
         }
         console.log(url)
         navigator.clipboard.writeText(url);
-        setTimeout(notif.classList.remove("hidden"), 10);
+        
+        if (notif.classList.contains("hidden")) {
+            notif.classList.remove("hidden");
+            notif.classList.add("hidden");
+        }else {
+            setTimeout(()=> notif.classList.add("hidden"), 500);
+        }
     }
     db = true
 }
