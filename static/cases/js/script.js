@@ -7,13 +7,18 @@ var notif = document.getElementById("notif");
 // console.log(a.concat("/?","q1=","test"))
 
 console.log(params); // object of all querys
+    var db = false
 
 
+var db= false
 function save() {
+if (db == false) {
 for (var i=0; i < ans.length;i++) {
     var count = i + 1;
-    url = url.concat(`q${count}=`,ans[i].value,"&")
-
+    if (db == false) {
+        url = url.concat(`q${count}=`,ans[i].value,"&")
+        url.slice(0,-1)
+    }
 }
   console.log(url)
  navigator.clipboard.writeText(url);
@@ -21,8 +26,8 @@ for (var i=0; i < ans.length;i++) {
     if (notif.classList.contains("hidden")) {
         notif.classList.remove("hidden")
         notif.classList.add("show-me")
-    } else {
-        notif.classList.remove("show-me")
-        notif.classList.add("hidden")
-    }
+        setTimeout(notif.classList.remove("show-me"), 10);
+    } 
+}
+db= true
 }
