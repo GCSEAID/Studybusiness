@@ -25,8 +25,7 @@ for (var i=0; i < ans.length;i++) {
     
     if (notif.classList.contains("hidden")) {
         notif.classList.remove("hidden")
-        notif.classList.add("show-me")
-        setTimeout(notif.classList.remove("show-me"), 10);
+        setTimeout(notif.classList.add("show-me"), 10);
     } 
 }
 db= true
