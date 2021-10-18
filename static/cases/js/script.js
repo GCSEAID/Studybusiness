@@ -23,12 +23,8 @@ function save() {
         console.log(url)
         navigator.clipboard.writeText(url);
         
-        if (notif.classList.contains("hidden")) {
-            notif.classList.remove("hidden");
-            notif.classList.add("hidden");
-        }else {
-            setTimeout(()=> notif.classList.add("hidden"), 500);
-        }
+        notif.classList.remove("hidden")
+        setTimeout(()=>notif.classList.add("hidden"),1500);
     }
     db = true
 }
