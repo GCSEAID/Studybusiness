@@ -1,7 +1,7 @@
 var ans = document.getElementsByClassName("question")
 var urlSearchParams = new URLSearchParams(window.location.search);
 var params = Object.fromEntries(urlSearchParams.entries());
-var url = `${window.location.protocol}//${window.location.host}/answers.html/?`
+var url = `${window.location.protocol}//${window.location.host}/answers.html?`
 var notif = document.getElementById("notif");
 
 // console.log(a.concat("/?","q1=","test"))
