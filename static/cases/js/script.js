@@ -43,7 +43,7 @@ function pageLoaded() {
         var val = []
         for (var i = 0; i < 6; i++) {
             var count = i + 1;
-            questions[i].value = params[("q" + i)] || "";
+            questions[i].value = params["q1"] || "";
         }
     }
 
