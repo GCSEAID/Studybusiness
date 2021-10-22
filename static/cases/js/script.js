@@ -43,9 +43,8 @@ function pageLoaded() {
         var val = []
         for (var i = 0; i < 6; i++) {
             var count = i + 1;
-            val.append(params[("q" + i)] || "");
+            questions[i] = params[("q" + i)] || "";
         }
-        questions.value = val // Does not work
     }
 
     /*
