@@ -34,7 +34,6 @@ function pageLoaded() {
     
     // Get the params from the query string
     const urlSearchParams = new URLSearchParams(window.location.search);
-    const params = Object.fromEntries(urlSearchParams.entries());
     const questions = document.getElementsByClassName("question");
     // Display the params from the querystring
     console.log(params);
@@ -46,7 +45,7 @@ function pageLoaded() {
             var count = i + 1;
             val.append(params[("q" + i)] || "");
         }
-        questions.value = val
+        questions.value = val // Does not work
     }
 
     /*
