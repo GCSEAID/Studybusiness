@@ -38,7 +38,7 @@ function pageLoaded() {
     const questions = document.getElementsByClassName("question");
     // Display the params from the querystring
     console.log(params);
-
+    console.log(questions);
     // populate the form fields
     if (db == true) {
         var val = []
