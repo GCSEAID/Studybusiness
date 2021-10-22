@@ -29,3 +29,32 @@ function save() {
     db = true
 }
 
+function pageLoaded() {
+    console.log("Body Loaded");
+    
+    // Get the params from the query string
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
+    const questions = document.getElementsByClassName("question");
+    // Display the params from the querystring
+    console.log(params);
+
+    // populate the form fields
+    if (db == true) {
+        var val = []
+        for (var i = 0; i < 6; i++) {
+            var count = i + 1;
+            val.append(params[("q" + i)] || "");
+        }
+        questions.value = val
+    }
+
+    /*
+    const q1 = document.getElementById("q1");
+    q1.value = params["q1"] || "";
+    
+    const q2 = document.getElementById("q2");
+    q2.value = params["q2"] || "";
+    */
+      
+}
