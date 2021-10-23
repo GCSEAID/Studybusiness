@@ -44,7 +44,7 @@ function pageLoaded() {
         for (var i = 0; i < questions.length; i++) {
             let id = "in_" + (n + 1);
             console.log(id)
-            document.getElementById(id).value = questions[n].value;
+            document.getElementById(id).value = questions[n].value; // params["q1"] || ""
         }
 
     /*
