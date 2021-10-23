@@ -35,7 +35,7 @@ function pageLoaded() {
     // Get the params from the query string
     const urlSearchParams = new URLSearchParams(window.location.search);
     const questions = document.getElementsByClassName("question");
-    let halfwayThrough = Math.floor(yourArray.length / 2);
+    let halfwayThrough = Math.floor(questions.length / 2);
     questions = questions.slice(halfwayThrough, yourArray.length);
     // Display the params from the querystring
     console.log(params);
