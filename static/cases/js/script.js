@@ -43,8 +43,9 @@ function pageLoaded() {
         var val = []
         for (var i = 0; i < questions.length; i++) {
             let id = "in_" + (n + 1);
+            let q = "q" + (n + 1);
             console.log(id)
-            document.getElementById(id).value = questions[n].value; // params["q1"] || ""
+            document.getElementById(id).value = params[q] || ""; // params["q1"] || ""
         }
     }
     /*
