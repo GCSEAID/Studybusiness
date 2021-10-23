@@ -46,7 +46,7 @@ function pageLoaded() {
             console.log(id)
             document.getElementById(id).value = questions[n].value; // params["q1"] || ""
         }
-
+    }
     /*
     const q1 = document.getElementById("q1");
     q1.value = params["q1"] || "";
