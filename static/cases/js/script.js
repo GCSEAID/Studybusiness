@@ -47,7 +47,7 @@ function pageLoaded() {
             console.log(id)
             console.log(params[q])
             console.log(document.getElementById(id).value)
-            document.getElementById(id).value = params[q]; // params["q1"] || ""
+            document.getElementById(id).value = params[q].value; // params["q1"] || ""
             console.log(document.getElementById(id).value)
         }
     }
