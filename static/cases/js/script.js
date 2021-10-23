@@ -1,7 +1,7 @@
 var ans = document.getElementsByClassName("question")
 var urlSearchParams = new URLSearchParams(window.location.search);
 var params = Object.fromEntries(urlSearchParams.entries());
-var url = `${window.location.protocol}//${window.location.host}/answers.html?`
+var url = `${window.location.protocol}//${window.location.host}/carbolt_mineral_ltd.html?`
 var notif = document.getElementById("notif");
 
 // console.log(a.concat("/?","q1=","test"))
@@ -41,11 +41,11 @@ function pageLoaded() {
     // populate the form fields
     if (db == true) {
         var val = []
-        for (var i = 0; i < 6; i++) {
-            var count = i + 1;
-            questions[i].value = params["q1"] || "";
+        for (var i = 0; i < questions.length; i++) {
+            let id = "in_" + (n + 1);
+            console.log(id)
+            document.getElementById(id).value = questions[n].value;
         }
-    }
 
     /*
     const q1 = document.getElementById("q1");
