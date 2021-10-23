@@ -45,7 +45,10 @@ function pageLoaded() {
             let id = "in_" + (n + 1);
             let q = "q" + (n + 1);
             console.log(id)
-            document.getElementById(id).value = params[q] || ""; // params["q1"] || ""
+            console.log(params[q])
+            console.log(document.getElementById(id).value)
+            document.getElementById(id).value = params[q]; // params["q1"] || ""
+            console.log(document.getElementById(id).value)
         }
     }
     /*
