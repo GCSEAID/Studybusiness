@@ -40,7 +40,6 @@ function pageLoaded() {
     // console.log(questions)
 		var questions_lst = Object.keys(questions).map((key) => [Number(key), questions[key]]);
     // Display the params from the querystring
-  	console.log(result);
     // populate the form fields
     if (db == true) {
         for (var i = 0; i < questions.length; i++) {
