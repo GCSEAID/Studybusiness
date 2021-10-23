@@ -6,7 +6,7 @@ var notif = document.getElementById("notif");
 
 // console.log(a.concat("/?","q1=","test"))
 
-console.log(params); // object of all querys
+// console.log(params); // object of all querys
 
 
 var db = false
@@ -20,7 +20,7 @@ function save() {
                 url.slice(0, -1)
             }
         }
-        console.log(url)
+        // console.log(url)
         navigator.clipboard.writeText(url);
         
         notif.classList.remove("hidden")
@@ -29,30 +29,27 @@ function save() {
     db = true
 }
 
+
+
 function pageLoaded() {
     console.log("Body Loaded");
     
     // Get the params from the query string
     const urlSearchParams = new URLSearchParams(window.location.search);
     const questions = document.getElementsByClassName("question");
-    console.log(questions)
-    let halfwayThrough = Math.floor(questions.length / 2);
-    questions = questions.splice(halfwayThrough, questions.length);
+    // console.log(questions)
+		var questions_lst = Object.keys(questions).map((key) => [Number(key), questions[key]]);
     // Display the params from the querystring
-    console.log(params);
-    console.log(questions);
+  	console.log(result);
     // populate the form fields
     if (db == true) {
-        var val = []
         for (var i = 0; i < questions.length; i++) {
             let id = "in_" + (n + 1);
             let q = "q" + (n + 1);
-            console.log(id)
-            console.log(params[q])
-            console.log(document.getElementById(id).value)
-            document.getElementById(id).value = params[q].value; // params["q1"] || ""
-            console.log(document.getElementById(id).value)
+            // console.log(params[q].value)
+            questions_lst[i] = params[q].value; // params["q1"] || "";
         }
+      console.log(result)
     }
     /*
     const q1 = document.getElementById("q1");
@@ -63,3 +60,6 @@ function pageLoaded() {
     */
       
 }
+
+
+pageLoaded()
