@@ -42,7 +42,7 @@ function pageLoaded() {
     // Display the params from the querystring
   	// console.log(questions_lst[0][1].value);
     // populate the form fields
-    // console.log(i)
+  
     for (var i = 0; i < 6; i++) {
       let id = "in_" + (i + 1);
       let q = "q" + (i + 1);	
