@@ -40,16 +40,17 @@ function pageLoaded() {
     // console.log(questions)
 		var questions_lst = Object.keys(questions).map((key) => [Number(key), questions[key]]);
     // Display the params from the querystring
+  	// console.log(questions_lst[0][1].value);
     // populate the form fields
-    if (db == true) {
-        for (var i = 0; i < questions.length; i++) {
-            let id = "in_" + (n + 1);
-            let q = "q" + (n + 1);
-            // console.log(params[q].value)
-            questions_lst[i] = params[q].value; // params["q1"] || "";
-        }
-      console.log(result)
-    }
+    // console.log(i)
+    for (var i = 0; i < 6; i++) {
+      let id = "in_" + (i + 1);
+      let q = "q" + (i + 1);	
+      // console.log(params[q].value)
+      questions_lst[i][1] = params[q]; // params["q1"] || "";
+      // console.log(questions_lst[i][1]) 
+      // console.log(params[q])
+     }
     /*
     const q1 = document.getElementById("q1");
     q1.value = params["q1"] || "";
@@ -59,6 +60,3 @@ function pageLoaded() {
     */
       
 }
-
-
-pageLoaded()
