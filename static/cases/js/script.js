@@ -36,32 +36,16 @@ function pageLoaded() {
     
     // Get the params from the query string
     const urlSearchParams = new URLSearchParams(window.location.search);
-  	var params = Object.fromEntries(urlSearchParams.entries());
-  	console.log(params)
-    const questions = document.getElementsByClassName("question");
-    // sole.log(questions)
-		// var questions_lst = Object.keys(questions).map((key) => [Number(key), questions[key]]);
-    // Display the params from the querystring
-  	// console.log(questions_lst[0][1].value);
-    // populate the form fields
-  
+    var params = Object.fromEntries(urlSearchParams.entries());
     
-  
+    // Input variable
+    const answers = document.getElementsByClassName("question");
+	
+    // populate the form fields
     for (var i = 0; i < 6; i++) {
       let id = "in_" + (i + 1);
       let q = "q" + (i + 1);	
       // console.log(params[q])
-      questions[i].value = params[q]; // params["q1"] || "";
-      // console.log(questions_lst)
-      console.log(questions[i]) 
-      console.log(params[q])
-     }
-    /*
-    const q1 = document.getElementById("q1");
-    q1.value = params["q1"] || "";
-    
-    const q2 = document.getElementById("q2");
-    q2.value = params["q2"] || "";
-    */
-      
+      answers[i].value = params[q];
+     }  
 }
