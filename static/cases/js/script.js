@@ -31,7 +31,28 @@ function save() {
 
 
 
+function save() {
+    if (db == false) {
+        for (var i = 0; i < ans.length; i++) {
+            var count = i + 1;
+            if (db == false) {
+                url = url.concat(`q${count}=`, ans[i].value, "&")
+                url.slice(0, -1)
+            }
+        }
+        // console.log(url)
+        navigator.clipboard.writeText(url);
+        
+        notif.classList.remove("hidden")
+        setTimeout(()=>notif.classList.add("hidden"),1500);
+    }
+    db = true
+}
+
+save()
+
 function pageLoaded() {
+  if (db != false) {
     console.log("Body Loaded");
     
     // Get the params from the query string
@@ -42,10 +63,11 @@ function pageLoaded() {
     const answers = document.getElementsByClassName("question");
 	
     // populate the form fields
-    for (var i = 0; i < params.length; i++) {
+    for (var i = 0; i < 6; i++) {
       let id = "in_" + (i + 1);
       let q = "q" + (i + 1);	
       // console.log(params[q])
       answers[i].value = params[q];
-     }  
+     }
+   } 
 }
