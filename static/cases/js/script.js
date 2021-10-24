@@ -30,27 +30,6 @@ function save() {
 }
 
 
-
-function save() {
-    if (db == false) {
-        for (var i = 0; i < ans.length; i++) {
-            var count = i + 1;
-            if (db == false) {
-                url = url.concat(`q${count}=`, ans[i].value, "&")
-                url.slice(0, -1)
-            }
-        }
-        // console.log(url)
-        navigator.clipboard.writeText(url);
-        
-        notif.classList.remove("hidden")
-        setTimeout(()=>notif.classList.add("hidden"),1500);
-    }
-    db = true
-}
-
-save()
-
 function pageLoaded() {
   if (db != false) {
     console.log("Body Loaded");
