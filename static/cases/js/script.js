@@ -31,7 +31,7 @@ function save() {
 
 
 function pageLoaded() {
-  if (db == true) {
+  
     console.log("Body Loaded");
     
     // Get the params from the query string
@@ -48,5 +48,4 @@ function pageLoaded() {
       // console.log(params[q])
       answers[i].value = params[q];
      }
-   } 
 }
