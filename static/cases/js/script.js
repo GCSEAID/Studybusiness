@@ -31,7 +31,7 @@ function save() {
 
 
 function pageLoaded() {
-  if (db != false) {
+  if (db == true) {
     console.log("Body Loaded");
     
     // Get the params from the query string
