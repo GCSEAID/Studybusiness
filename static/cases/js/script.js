@@ -32,20 +32,21 @@ function save() {
 
 
 function pageLoaded() {
-  
-   console.log("Body Loaded");
-    
-   // Get the params from the query string
-   const urlSearchParams = new URLSearchParams(window.location.search);
-   var params = Object.fromEntries(urlSearchParams.entries());
-  
-   // Input variable
-   const answers = document.getElementsByClassName("question");
-  
-   // populate the form fields
-   for (var i = 0; i < answers.length; i++) {
-     let q = "q" + (i + 1);	
-    console.log(params[q])
-     answers[i].value = params[q];
-   }
+  if (db == true) {
+    console.log("Body Loaded");
+
+    // Get the params from the query string
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    var params = Object.fromEntries(urlSearchParams.entries());
+
+    // Input variable
+    const answers = document.getElementsByClassName("question");
+
+    // populate the form fields
+    for (var i = 0; i < answers.length; i++) {
+      let q = "q" + (i + 1);	
+      console.log(params[q])
+      answers[i].value = params[q];
+    }
+  }  
 }
