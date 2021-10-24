@@ -36,18 +36,22 @@ function pageLoaded() {
     
     // Get the params from the query string
     const urlSearchParams = new URLSearchParams(window.location.search);
+  	var params = Object.fromEntries(urlSearchParams.entries());
     const questions = document.getElementsByClassName("question");
-    // console.log(questions)
-		var questions_lst = Object.keys(questions).map((key) => [Number(key), questions[key]]);
+    // sole.log(questions)
+		// var questions_lst = Object.keys(questions).map((key) => [Number(key), questions[key]]);
     // Display the params from the querystring
   	// console.log(questions_lst[0][1].value);
     // populate the form fields
   
+    
+  
     for (var i = 0; i < 6; i++) {
       let id = "in_" + (i + 1);
       let q = "q" + (i + 1);	
-      // console.log(params[q].value)
-      questions_lst[i][1] = params[q]; // params["q1"] || "";
+      // console.log(params[q])
+      questions[i][1] = params[q]; // params["q1"] || "";
+      // console.log(questions_lst)
       // console.log(questions_lst[i][1]) 
       // console.log(params[q])
      }
