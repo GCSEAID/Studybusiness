@@ -30,22 +30,22 @@ function save() {
 }
 
 
+
 function pageLoaded() {
   
-    console.log("Body Loaded");
+   console.log("Body Loaded");
     
-    // Get the params from the query string
-    const urlSearchParams = new URLSearchParams(window.location.search);
-    var params = Object.fromEntries(urlSearchParams.entries());
-    
-    // Input variable
-    const answers = document.getElementsByClassName("question");
-	
-    // populate the form fields
-    for (var i = 0; i < params.length; i++) {
-      let id = "in_" + (i + 1);
-      let q = "q" + (i + 1);	
-      // console.log(params[q])
-      answers[i].value = params[q];
-     }
+   // Get the params from the query string
+   const urlSearchParams = new URLSearchParams(window.location.search);
+   var params = Object.fromEntries(urlSearchParams.entries());
+  
+   // Input variable
+   const answers = document.getElementsByClassName("question");
+  
+   // populate the form fields
+   for (var i = 0; i < answers.length; i++) {
+     let q = "q" + (i + 1);	
+    console.log(params[q])
+     answers[i].value = params[q];
+   }
 }
