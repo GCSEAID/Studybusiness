@@ -42,7 +42,7 @@ function pageLoaded() {
     const answers = document.getElementsByClassName("question");
 	
     // populate the form fields
-    for (var i = 0; i < 6; i++) {
+    for (var i = 0; i < params.length; i++) {
       let id = "in_" + (i + 1);
       let q = "q" + (i + 1);	
       // console.log(params[q])
