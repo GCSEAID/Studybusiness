@@ -32,6 +32,18 @@ function save() {
 
 
 function pageLoaded() {
+
+   const caseStudy = {
+       id:'1',
+       title: "New Title", 
+       desc: "Desc goes here", 
+       questions: ["Q1 goes here", "Q2 goes here", "Q3 goes here"] 
+    }
+
+   title.innerHTML = caseStudy.title
+
+   document.body.appendChild(title)
+
    console.log("Body Loaded");
 
    // Get the params from the query string
