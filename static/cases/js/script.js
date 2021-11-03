@@ -22,9 +22,9 @@ function save() {
         }
         // console.log(url)
         navigator.clipboard.writeText(url);
-        
+
         notif.classList.remove("hidden")
-        setTimeout(()=>notif.classList.add("hidden"),1500);
+        setTimeout(() => notif.classList.add("hidden"), 1500);
     }
     db = true
 }
@@ -32,31 +32,41 @@ function save() {
 
 
 function pageLoaded() {
-
-   const caseStudy = {
-       id:'1',
-       title: "New Title", 
-       desc: "Desc goes here", 
-       questions: ["Q1 goes here", "Q2 goes here", "Q3 goes here"] 
+    var questions = document.getElementsByClassName("question")
+    var title = document.querySelector("#caseTitle");
+    var desc = document.querySelector("#caseDesc");
+    var questionTitle = document.querySelector("#caseQuestionsTitle")
+    
+    const caseStudy = {
+        id: '1',
+        title: "New Title",
+        desc: "Desc goes here",
+        questions: ["Q1", "Q2 goes here", "Q3 goes here","Q4","Q5","Q6"]
     }
 
-   title.innerHTML = caseStudy.title
+    title.innerText =  caseStudy.title
+    desc.innerText =  caseStudy.desc
+    questionTitle.innerText = 'Questions For ' + title.innerText
 
-   document.body.appendChild(title)
+    for (i = 0; i < questions.length; i++) {
+        var c = i+1
+        questions[i].parentElement.firstElementChild.innerHTML = "<strong>Question " + [c] + ":</strong> " + caseStudy.questions[i];
+    }
 
-   console.log("Body Loaded");
 
-   // Get the params from the query string
-   const urlSearchParams = new URLSearchParams(window.location.search);
-   var params = Object.fromEntries(urlSearchParams.entries());
+    console.log("Body Loaded");
 
-   // Input variable
-   const answers = document.getElementsByClassName("question");
+    // Get the params from the query string
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    var params = Object.fromEntries(urlSearchParams.entries());
 
-   // populate the form fields
-   for (var i = 0; i < answers.length; i++) {
-     let q = "q" + (i + 1);	
-     console.log(params[q])
-     answers[i].value = params[q] || "";
-   } 
+    // Input variable
+    const answers = document.getElementsByClassName("question");
+
+    // populate the form fields
+    for (var i = 0; i < answers.length; i++) {
+        let q = "q" + (i + 1);
+        console.log(params[q])
+        answers[i].value = params[q] || "";
+    }
 }
