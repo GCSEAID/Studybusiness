@@ -32,10 +32,8 @@ function save() {
 
 
 function pageLoaded() {
-    path = parseInt($('#1').attr('data'));
-
-    id_web_url = parseInt(path) - 1
-    console.log(id_web_url)
+    const urlIdParams = window.location.search;
+		const id_web_url = String(urlIdParams)[4] - 1;
 
     var questions = document.getElementsByClassName("question")
     var title = document.querySelector("#caseTitle");
@@ -79,10 +77,11 @@ function pageLoaded() {
     const answers = document.getElementsByClassName("question");
 
     // populate the form fields
-    for (var i = 0; i < answers.length; i++) {
+    for (var i = 1; i < answers.length; i++) {
         let q = "q" + (i + 1);
         console.log(params[q])
         answers[i].value = params[q] || "";
     }
 }
+
 
