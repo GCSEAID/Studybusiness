@@ -69,7 +69,7 @@ function pageLoaded() {
     if (i < 6) {
         var item = document.getElementById(extra_question);
 
-        item.parentNode.removeChild(item)
+        item.remove(item)
     }
 
     console.log("Body Loaded");
