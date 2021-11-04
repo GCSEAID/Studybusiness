@@ -78,7 +78,7 @@ function pageLoaded() {
 
     // populate the form fields
     for (var i = 1; i < answers.length; i++) {
-        let q = "q" + (i + 1);
+        let q = "q" + i;
         console.log(params[q])
         answers[i].value = params[q] || "";
     }
