@@ -67,7 +67,7 @@ function pageLoaded() {
     }
 
     if (i < 6) {
-        var item = document.getElementById(extra_question);
+        var item = document.getElementById("extra_question");
 
         item.remove(item)
     }
