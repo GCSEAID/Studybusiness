@@ -62,7 +62,7 @@ function pageLoaded() {
     questionTitle.innerText = 'Questions For ' + title.innerText
 
     for (i = 0; i < caseStudy[id_web_url].questions.length; i++) {
-        var original = document.getElementById('duplicater');
+        var original = document.getElementById('duplicator');
         var clone = original.cloneNode(true);
         clone.id = i;
         original.parentNode.appendChild(clone)
