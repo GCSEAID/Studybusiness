@@ -1,7 +1,7 @@
 var ans = document.getElementsByClassName("question")
 var urlSearchParams = new URLSearchParams(window.location.search);
 var params = Object.fromEntries(urlSearchParams.entries());
-var url = `${window.location.protocol}//${window.location.host}/${window.location.pathname}?`
+var url = `${window.location.protocol}//${window.location.host}/${template.html}?`
 var notif = document.getElementById("notif");
 
 // console.log(a.concat("/?","q1=","test"))
@@ -32,10 +32,9 @@ function save() {
 
 
 function pageLoaded() {
-    console.log(window.location.pathname)
-    path = window.location.pathname
+    path = parseInt($('#1').attr('data'));
 
-    id_web_url = parseInt(path[1]) - 1
+    id_web_url = parseInt(path) - 1
     console.log(id_web_url)
 
     var questions = document.getElementsByClassName("question")
