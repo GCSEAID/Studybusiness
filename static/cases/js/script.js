@@ -68,7 +68,7 @@ function pageLoaded() {
         original.parentNode.appendChild(clone)
     }
     var item = document.getElementById("duplicator");
-    item.parentNode.removeChild(item)
+    item.remove(item)
 
     for (i = 0; i < caseStudy[id_web_url].questions.length; i++) {
         var c = i+1
