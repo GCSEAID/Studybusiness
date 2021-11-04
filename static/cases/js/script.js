@@ -66,6 +66,11 @@ function pageLoaded() {
         questions[i].parentElement.firstElementChild.innerHTML = "<strong>Question " + [c] + ":</strong> " + caseStudy[id_web_url].questions[i];
     }
 
+    if (i < 5) {
+        var item = document.getElementById(extra_question);
+
+        item.parentNode.removeChild(item)
+    }
 
     console.log("Body Loaded");
 
