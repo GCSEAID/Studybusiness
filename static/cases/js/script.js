@@ -61,7 +61,7 @@ function pageLoaded() {
     desc.innerText =  caseStudy[id_web_url].desc
     questionTitle.innerText = 'Questions For ' + title.innerText
 
-    for (i = 1; i < caseStudy[id_web_url].questions.length; i++) {
+    for (i = 0; i < caseStudy[id_web_url].questions.length; i++) {
         var original = document.getElementById('duplicator');
         var clone = original.cloneNode(true);
         clone.id = i;
@@ -70,7 +70,7 @@ function pageLoaded() {
     var item = document.getElementById("duplicator");
     item.remove(item)
 
-    for (i = 1; i < caseStudy[id_web_url].questions.length; i++) {
+    for (i = 0; i < caseStudy[id_web_url].questions.length; i++) {
         var c = i+1
         questions[i].parentElement.firstElementChild.innerHTML = "<strong>Question " + [c] + ":</strong> " + caseStudy[id_web_url].questions[i];
     }
