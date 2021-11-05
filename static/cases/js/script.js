@@ -46,7 +46,7 @@ function populateAnswer() {
     }
 }
 
-function populateValues() {
+function populateValues(id_web_url, questions, title, desc, questionTitle, item, caseStudy) {
     //Inserts title, description and question title values from the caseStudy Object
     title.innerText =  caseStudy[id_web_url].title
     desc.innerText =  caseStudy[id_web_url].desc
