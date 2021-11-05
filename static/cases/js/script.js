@@ -88,7 +88,7 @@ function pageLoaded() {
     for (var i = 1; i < answers.length; i++) {
         let q = "q" + i;
         console.log(params[q])
-        answers[i].value = params[q] || "";
+        answers[i-1].value = params[q] || "";
     }
 }
 
