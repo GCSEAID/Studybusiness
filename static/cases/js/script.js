@@ -131,18 +131,18 @@ function caseStudyPagesLoaded(id_web_url, questions, title, desc, questionTitle,
 
     length_case = caseStudy.length
     //Inserts title, description and question title values from the caseStudy Object
-        for (i = 0; i < length_case; i++) {
-            var original = document.getElementById('duplicator');
-            var clone = original.cloneNode(true);
-            clone.id = i;
-            original.parentNode.appendChild(clone)
-        }
-        item.remove(item) //deletes duplicator
+    for (i = 0; i < length_case; i++) {
+        var original = document.getElementById('duplicator');
+        var clone = original.cloneNode(true);
+        clone.id = i;
+        original.parentNode.appendChild(clone)
+    }
+    item.remove(item) //deletes duplicator
 
-        for (i = 0; i < length_case; i++) {
-            title.innerText =  caseStudy[i].title
-            desc.innerText =  caseStudy[i].desc
-        }
+    for (i = 0; i < length_case; i++) {
+        title.innerText =  caseStudy[i].title
+        desc.innerText =  caseStudy[i].desc
+    }
     
     console.log("Body Loaded");
 }
