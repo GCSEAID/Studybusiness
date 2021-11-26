@@ -125,6 +125,10 @@ function caseStudyPagesLoaded(id_web_url, questions, title, desc, questionTitle,
     (9 marks)
     `]      
     }]
+    var title = document.querySelector("#caseTitle");
+    var desc = document.querySelector("#caseDesc");
+    var item = document.getElementById("duplicator"); //Selects duplicator div to be later removed (unnecessary div at the end of the page)
+
     length_case = caseStudy.length
     //Inserts title, description and question title values from the caseStudy Object
     for ( i = 0; i < length_case; i++) {
@@ -136,7 +140,7 @@ function caseStudyPagesLoaded(id_web_url, questions, title, desc, questionTitle,
             original.parentNode.appendChild(clone)
         }
         item.remove(item) //deletes duplicator
-        
+
         for (i = 0; i < length_case; i++) {
             title.innerText =  caseStudy[i].title
             desc.innerText =  caseStudy[i].desc
