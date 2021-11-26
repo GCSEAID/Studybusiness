@@ -136,13 +136,10 @@ function caseStudyPagesLoaded(id_web_url, questions, title, desc, questionTitle,
         var clone = original.cloneNode(true);
         clone.id = i;
         original.parentNode.appendChild(clone)
-    }
-    item.remove(item) //deletes duplicator
-
-    for (i = 0; i < length_case; i++) {
         title.innerText =  caseStudy[i].title
         desc.innerText =  caseStudy[i].desc
     }
+    item.remove(item) //deletes duplicator
     
     console.log("Body Loaded");
 }
