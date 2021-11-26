@@ -125,8 +125,8 @@ function caseStudyPagesLoaded(id_web_url, questions, title, desc, questionTitle,
     (9 marks)
     `]      
     }]
-    var title = document.querySelector("#caseTitle");
-    var desc = document.querySelector("#caseDesc");
+    var title = document.getElementsByClassName("caseTitle");
+    var desc = document.getElementsByClassName("caseDesc");
     var item = document.getElementById("duplicator"); //Selects duplicator div to be later removed (unnecessary div at the end of the page)
 
     length_case = caseStudy.length
