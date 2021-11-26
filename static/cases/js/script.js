@@ -127,11 +127,7 @@ function caseStudyPagesLoaded(id_web_url, questions, title, desc, questionTitle,
     }]
     length_case = caseStudy.length
     //Inserts title, description and question title values from the caseStudy Object
-    for ( i = 0; i <length_case; i++) {
-        title.innerText =  caseStudy[id].title
-        desc.innerText =  caseStudy[id].desc
-        questionTitle.innerText = 'Questions For ' + title.innerText
-
+    for ( i = 0; i < length_case; i++) {
         //Duplicates and then deletes question divs
         for (i = 0; i < length_case; i++) {
             var original = document.getElementById('duplicator');
@@ -140,6 +136,15 @@ function caseStudyPagesLoaded(id_web_url, questions, title, desc, questionTitle,
             original.parentNode.appendChild(clone)
         }
         item.remove(item) //deletes duplicator
+        
+        for (i = 0; i < length_case; i++) {
+            title.innerText =  caseStudy[i].title
+            desc.innerText =  caseStudy[i].desc
+            questionTitle.innerText = 'Questions For ' + title.innerText
+        }
+        
+
+        
 
     }
     
