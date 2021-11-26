@@ -136,8 +136,8 @@ function caseStudyPagesLoaded(id_web_url, questions, title, desc, questionTitle,
         var clone = original.cloneNode(true);
         clone.id = i;
         original.parentNode.appendChild(clone)
-        title.innerText =  caseStudy[i].title
-        desc.innerText =  caseStudy[i].desc
+        title.innerText =  caseStudy[i + 1].title
+        desc.innerText =  caseStudy[i + 1].desc
     }
     item.remove(item) //deletes duplicator
     
