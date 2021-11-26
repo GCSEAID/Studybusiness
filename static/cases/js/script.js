@@ -141,8 +141,9 @@ function caseStudyPagesLoaded(id_web_url, questions, title, desc, questionTitle,
 
     for (i = 0; i < length_case; i++) {
         var c = i+1
-        title[i].parentElement.firstElementChild.innerText =  caseStudy[i + 1].title
-        desc[i].parentElement.firstElementChild.innerText =  caseStudy[i + 1].desc
+        title[i].parentElement.innerText =  caseStudy[i].title
+        console.log(caseStudy[i].title);
+        desc[i].parentElement.firstElementChild.innerText =  caseStudy[i].des
         // questions[i].parentElement.firstElementChild.innerHTML = "<strong>Question " + [c] + ":</strong> " + caseStudy[id_web_url].questions[i];
     }
     
