@@ -144,7 +144,6 @@ function caseStudyPagesLoaded(id_web_url, questions, title, desc, questionTitle,
         for (i = 0; i < length_case; i++) {
             title.innerText =  caseStudy[i].title
             desc.innerText =  caseStudy[i].desc
-            questionTitle.innerText = 'Questions For ' + title.innerText
         }
         
 
