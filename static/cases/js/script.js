@@ -62,11 +62,12 @@ function populateAnswer() {
     }
 }
 
-function populateValues(id_web_url, questions, title, desc, questionTitle, item, caseStudy) {
+function populateValues(id_web_url, web_title,questions, title, desc, questionTitle, item, caseStudy) {
     //Inserts title, description and question title values from the caseStudy Object
     title.innerText =  caseStudy[id_web_url].title
     desc.innerText =  caseStudy[id_web_url].desc
     questionTitle.innerText = 'Questions For ' + title.innerText
+    web_title.innerText = "StudyBusiness – Business – Case studies - " + caseStudy[id_web_url].title 
 
     //Duplicates and then deletes question divs
     for (i = 0; i < caseStudy[id_web_url].questions.length; i++) {
@@ -92,13 +93,14 @@ function pageLoaded() {
     var questions = document.getElementsByClassName("question")
     var title = document.querySelector("#caseTitle");
     var desc = document.querySelector("#caseDesc");
+    var web_title = document.querySelector("#web_title")
     var questionTitle = document.querySelector("#caseQuestionsTitle");
     var item = document.getElementById("duplicator"); //Selects duplicator div to be later removed (unnecessary div at the end of the page)
 
     
 
     //Populate the html with case study information
-    populateValues(id_web_url, questions, title, desc, questionTitle, item, caseStudy)
+    populateValues(id_web_url, web_title,questions, title, desc, questionTitle, item, caseStudy)
     
 
     // If answers are avaialbe then the populate function deals with that
