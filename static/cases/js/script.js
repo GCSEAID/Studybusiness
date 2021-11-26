@@ -108,4 +108,8 @@ function pageLoaded() {
     
 }
 
+function caseStudyPagesLoaded() {
+    
+}
+
 
