@@ -21,6 +21,14 @@ var notif = document.getElementById("notif");
 //     }
 // };
 // console.log(handleData());
+async function fetchData() {
+    var requrl = "http://127.0.0.1:5000/static/cases/js/test.json";
+    var req = new Request(requrl);
+    var res = await fetch(req);
+
+    let data = await res.json();
+    return data
+};
 
 
 var caseStudy = [{
@@ -87,26 +95,64 @@ function populateAnswer() {
     }
 }
 
-function populateValues(id_web_url, questions, title, desc, img, questionTitle, item, caseStudy) {
+async function populateValues(id_web_url, questions, title, desc, img, questionTitle, item, caseStudy) {
+    let data = await fetchData();
+    let queryResults = new URLSearchParams(window.location.search);
+    let id = queryResults.get("id");
+    let topic = queryResults.get("topic");
+
+    for (var i in data[topic]) {
+        if (i == id) {
+            let main = data[topic][id];
+            console.log(main)
+            let newtitle = main.title;
+            let newimg = main.img;
+            let newdesc = main.desc;
+
+            title.textContent = newtitle;
+            img.src = "static/public/images/" + newimg;
+            desc.textContent = newdesc;
+            questionTitle.textContent = 'Questions For ' + newtitle;
+
+            for (i = 0; i < main.questions.length; i++) {
+                var original = document.getElementById('duplicator');
+                var clone = original.cloneNode(true);
+                clone.id = i;
+                original.parentNode.appendChild(clone)
+            }
+
+            item.remove(item) //deletes duplicator
+
+            for (i = 0; i < main.questions.length; i++) {
+                var c = i + 1
+                questions[i].parentElement.firstElementChild.innerHTML = "<strong>Question " + [c] + ":</strong> " + main.questions[i];
+            }
+
+        }
+
+        // console.log(i, data[topic][i])
+    }
+
+
     //Inserts title, description and question title values from the caseStudy Object
-    title.textContent = caseStudy[id_web_url].title
-    img.src = "static/public/images/" + caseStudy[id_web_url].img;
-    desc.textContent = caseStudy[id_web_url].desc
-    questionTitle.textContent = 'Questions For ' + title.textContent
+    // title.textContent = caseStudy[id_web_url].title
+    // img.src = "static/public/images/" + caseStudy[id_web_url].img;
+    // desc.textContent = caseStudy[id_web_url].desc
+    // questionTitle.textContent = 'Questions For ' + title.textContent
 
     //Duplicates and then deletes question divs
-    for (i = 0; i < caseStudy[id_web_url].questions.length; i++) {
-        var original = document.getElementById('duplicator');
-        var clone = original.cloneNode(true);
-        clone.id = i;
-        original.parentNode.appendChild(clone)
-    }
-    item.remove(item) //deletes duplicator
+    // for (i = 0; i < main.questions.length; i++) {
+    //     var original = document.getElementById('duplicator');
+    //     var clone = original.cloneNode(true);
+    //     clone.id = i;
+    //     original.parentNode.appendChild(clone)
+    // }
+    // item.remove(item) //deletes duplicator
 
-    for (i = 0; i < caseStudy[id_web_url].questions.length; i++) {
-        var c = i + 1
-        questions[i].parentElement.firstElementChild.innerHTML = "<strong>Question " + [c] + ":</strong> " + caseStudy[id_web_url].questions[i];
-    }
+    // for (i = 0; i < caseStudy[id_web_url].questions.length; i++) {
+    //     var c = i + 1
+    //     questions[i].parentElement.firstElementChild.innerHTML = "<strong>Question " + [c] + ":</strong> " + caseStudy[id_web_url].questions[i];
+    // }
 
     console.log("Body Loaded");
 }

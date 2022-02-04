@@ -30,24 +30,27 @@ async function test() {
         console.log(i, v)
 
         newtitle.innerText = i
-
-        let newcase = casestudy.cloneNode(true);
-        casestudy.remove(casestudy);
-        secTitle.remove(secTitle);
-
-        newcase.id = v[0].id;
-        newcase.href = "template?id=" + newcase.id;
-
-        let newcaseImg = newcase.querySelector("#caseimg");
-        let newcaseTitle = newcase.querySelector("#caseTitle");
-        let newcaseDesc = newcase.querySelector("#caseDesc");
-
-        newcaseImg.src = "/static/public/images/" + v[0].img;
-        newcaseTitle.innerText = v[0].title;
-        newcaseDesc.innerText = v[0].shortdesc;
-
+        
+        
         document.querySelector(".topic").appendChild(newtitle);
-        document.querySelector(".topic").appendChild(newcase);
+        for (index in Object.keys(v)) {
+            let newcase = casestudy.cloneNode(true);
+            casestudy.remove(casestudy);
+            secTitle.remove(secTitle);
+
+            newcase.id = v[index].id;
+            newcase.href = "template?topic=" + i + "&id=" + newcase.id;
+
+            let newcaseImg = newcase.querySelector("#caseimg");
+            let newcaseTitle = newcase.querySelector("#caseTitle");
+            let newcaseDesc = newcase.querySelector("#caseDesc");
+
+            newcaseImg.src = "/static/public/images/" + v[index].img;
+            newcaseTitle.innerText = v[index].title;
+            newcaseDesc.innerText = v[index].shortdesc;
+
+            document.querySelector(".topic").appendChild(newcase);
+        }
 
     }
 
