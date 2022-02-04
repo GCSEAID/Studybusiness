@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<title>StudyBusiness – Case Studies</title>
+
+
+  <!--Meta Data -->
+    <link rel="stylesheet" href="static/public/css/bulma.min.css">
+    <link rel="stylesheet" href="static/public/css/main.css">
+    <link rel="stylesheet" href="static/cases/css/style.css">
+
+    <script src="static/cases/js/caselistpopulater.js"></script>
+    <!-- == Fontawesome 5 == -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <!-- == Fontawesome 5 == -->
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/GCSEAID/Studybusiness/dev/website/static/public/images/logo.png" type="image/x-icon">
+<!--end of Meta data -->
+    
+<!--Navigation bar-->
+<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+  <div class="container">
+      <div class="navbar-brand">
+          <a class="navbar-item noselect" href="/">
+              <img class="nodrag nav-logo" src="https://raw.githubusercontent.com/GCSEAID/Studybusiness/dev/static/public/images/logotext.png" draggable="false">
+          </a>
+
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+              data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+              <a href="/" class="navbar-item">
+                  Home
+              </a>
+          
+              <div class="navbar-item has-dropdown is-hoverable">
+                  <a href="business" class="navbar-link">
+                      Business
+                  </a>
+                  <div class="navbar-dropdown">
+                          <div class="dropdown-trigger navbar-item">
+                              <a href="cases" class="navbar-item">Cases</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+                          </div>  
+                          <div class="dropdown-trigger navbar-item">
+                              <a href="definitions" class="navbar-item">Definitions</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+                          </div>
+
+          </div>  </div>
+      </div>
+  </div>
+</nav>
+
+
+  <!--end of Navigation bar-->
+
+</head>
+
+<body onload="test()">
+  <div class="container mt-4 mb-4">
+    <h2 class="title f-2r">Our list of case studies</h2>
+    <div class="content">
+      <h2 class="title f-15r">Chapter 1</h2>
+
+      <div class="topic">
+        <h3 id="topicTitle" class="title f-12r">Topic Placeholder</h3>
+        <a id="case" class="box" href="template?id=1">
+          <div class="case">
+            <article class="media">
+              <div class="media-left">
+                  <img id="caseimg"
+                    src="static/public/images/Air Vigour Pic.jpg"
+                    alt="Business Image" class="image is-130w">
+              </div>
+              <div class="media-content">
+                <div class="content">
+                    <strong id="caseTitle">Case Study Title</strong>
+                    <br>
+                    <p id="caseDesc">
+                      Case Study Description
+                    </p>
+                </div>
+                <div class="level is-mobile">
+                  <div class="level-left">
+                    <small class="has-text-grey">Author – Akshanjay</small>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </a>
+        <!-- <h3 class="title f-12r">Topic 2: Business Objectives</h3>
+        <a class="box" href="template?id=2">
+          <div class="case">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-130w">
+                  <img
+                    src="static/public/images/Omar Sweet Shop Pic.jpg"
+                    alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Omar Sweet Shop</strong>
+                    <br>
+                    Omar owns a sweet shop in one of the busiest souqs in Kuwait. Omar most profitable months were in the Ramadan season where people fasted from sunrise to sunset. Omar’s family has also been helping in the running of the business.
+                  </p>
+                </div>
+                <nav class="level is-mobile">
+                  <div class="level-left">
+                    <small class="has-text-grey">Author – Akshanjay</small>
+                  </div>
+                </nav>
+              </div>
+            </article>
+          </div>
+        </a> -->
+      </div>
+      <!--
+      <div class="topic">
+        <h3 class="title f-12r">Topic 2: Business Services</h3>
+        <a class="box" href="carbolt_mineral_ltd.html">
+          <div class="case">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-130w">
+                  <img
+                    src="https://img.etimg.com/thumb/width-640,height-480,imgsize-371409,resizemode-1,msid-73063341/industry/indl-goods/svs/metals-mining/coal-mining-may-be-opened-up-to-all-sectors-before-next-auction/4.jpg"
+                    alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Carbolt Mineral LTD</strong>
+                    <br>
+                    Cobalt Mineral LTD has been mining coal and other minerals in Australia in the past 10 years. Their
+                    main quarry is in Olympic Dam, south of Australia. They mainly sell iron ore and some uranium ores too
+                    nuclear power plants and iron ore extractors.
+                  </p>
+                </div>
+                <nav class="level is-mobile">
+                  <div class="level-left">
+                    <small class="has-text-grey">Author – Akshanjay</small>
+                  </div>
+                </nav>
+              </div>
+            </article>
+          </div>
+        </a>
+      </div>
+      
+
+    </div>
+
+    <div class="content"> 
+      <h2 class="title f-15r">Chapter 2</h2>
+
+      <div class="topic">
+        <h3 class="title f-12r">Topic 2: Business Services</h3>
+        <a class="box" href="carbolt_mineral_ltd.html">
+          <div class="case">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-130w">
+                  <img
+                    src="https://img.etimg.com/thumb/width-640,height-480,imgsize-371409,resizemode-1,msid-73063341/industry/indl-goods/svs/metals-mining/coal-mining-may-be-opened-up-to-all-sectors-before-next-auction/4.jpg"
+                    alt="Image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>Carbolt Mineral LTD</strong>
+                    <br>
+                    Cobalt Mineral LTD has been mining coal and other minerals in Australia in the past 10 years. Their
+                    main quarry is in Olympic Dam, south of Australia. They mainly sell iron ore and some uranium ores too
+                    nuclear power plants and iron ore extractors.
+                  </p>
+                </div>
+                <nav class="level is-mobile">
+                  <div class="level-left">
+                    <small class="has-text-grey">Author – Akshanjay</small>
+                  </div>
+                </nav>
+              </div>
+            </article>
+          </div>
+        </a>
+      </div>
+      
+
+    </div>
+
+
+
+  </div>
+  -->
+</div>
+</div>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+      <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
+  </div>
+</footer>
+<script>Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"),0).forEach((function(r){r.addEventListener("click",(function(){var e=document.getElementById(r.dataset.target);r.classList.toggle("is-active"),e.classList.toggle("is-active")}))}));       </script>
+</body>
+</html>
