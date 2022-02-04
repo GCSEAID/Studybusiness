@@ -35,9 +35,13 @@ html {
   background-attachment: fixed !important;
 }
 
-body {
+html, body {
   height: 100%;
+  margin: 0;
+  min-height: calc(100vh - 100px);
 }
+
+
 nav.navbar {
   background: var(--white) !important;
   background-color: var(--white) !important;
