@@ -1,5 +1,5 @@
 async function fetchData() {
-    var requrl = "http://127.0.0.1:5000/static/cases/js/test.json";
+    var requrl = `${window.location.protocol}//${window.location.host}/static/cases/js/test.json`;
     var req = new Request(requrl);
     var res = await fetch(req);
 

@@ -8,7 +8,7 @@ var url = `${window.location.protocol}//${window.location.host}${window.location
 var notif = document.getElementById("notif");
 
 // async function handleData() {
-//     var requrl = "http://127.0.0.1:5000/static/cases/js/test.json";
+    // var requrl = `${window.location.protocol}//${window.location.host}/static/cases/js/test.json`;
 //     var req = new Request(requrl);
 //     var res = await fetch(req);
 
@@ -22,7 +22,7 @@ var notif = document.getElementById("notif");
 // };
 // console.log(handleData());
 async function fetchData() {
-    var requrl = "http://127.0.0.1:5000/static/cases/js/test.json";
+    var requrl = `${window.location.protocol}//${window.location.host}/static/cases/js/test.json`;
     var req = new Request(requrl);
     var res = await fetch(req);
 
