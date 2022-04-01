@@ -66,7 +66,39 @@
       <h2 class="title f-15r">Chapter 1</h2>
 
       <div class="topic">
-        <h3 id="topicTitle" class="title f-12r">Topic Placeholder</h3>
+       {% for case in cases %}
+       <a id="casee" class="box" href='template/{{ case.id }}' >
+          <div class="case">
+            <article class="media">
+              <div class="media-left">
+                  <img id="caseimg"
+                    src="static/public/images/Air Vigour Pic.jpg"
+                    alt="Business Image" class="image is-130w">
+              </div>
+              <div class="media-content">
+                <div class="content">
+                    <strong id="caseTitlee"> {{ case.title }} </strong>
+                    <br>
+                    <p id="caseDesce">
+                      {{ case.description }}
+                    </p>
+                </div>
+                <div class="level is-mobile">
+                  <div class="level-left">
+                    <small class="has-text-grey">Author – Akshanjay</small>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </a> 
+        
+        {% endfor %}
+
+
+        
+<!--         <h3 id="topicTitle" class="title f-12r">Topic Placeholder</h3> -->
+<!--         
         <a id="case" class="box" href="template?id=1">
           <div class="case">
             <article class="media">
@@ -91,7 +123,7 @@
               </div>
             </article>
           </div>
-        </a>
+        </a> -->
         <!-- <h3 class="title f-12r">Topic 2: Business Objectives</h3>
         <a class="box" href="template?id=2">
           <div class="case">
