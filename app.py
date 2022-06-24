@@ -10,6 +10,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 # app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 
@@ -73,10 +74,11 @@ def templateRedirect():
 
 @app.route('/template/<id>')
 def templateSpecific(id):
-    query_string = "SELECT * FROM case_studies WHERE id = " + id
-    data = db.session.execute(query_string)
-    print(data)
-    return render_template('template.html', data=data)
+    caseStudyQuery = "SELECT * FROM case_studies WHERE id = " + id
+    questionsQuery = "SELECT * FROM questions WHERE question_id = " + id
+    caseData = db.session.execute(caseStudyQuery)
+    questionsData = db.session.execute(questionsQuery)
+    return render_template('template.html', caseData=caseData, questionsData=questionsData)
 
 
 @app.route('/list')
