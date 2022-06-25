@@ -1,5 +1,5 @@
 import os
-from flask import (Flask, make_response, render_template, Response, redirect)
+from flask import (Flask, render_template, redirect)
 from flask_cors import CORS
 # from Database_handler import Database_handler
 
@@ -12,7 +12,6 @@ from flask_sqlalchemy import SQLAlchemy
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-
 
 class case_studies(db.Model):
     id = db.Column(db.Integer, nullable=False)
@@ -85,10 +84,21 @@ def templateSpecific(id):
 def list():
     return render_template("list.html", values=questions.query.all())
 
+# Force Reloading of html files
+from os import path, walk
+
+extra_dirs = ['../templates/',]
+extra_files = extra_dirs[:]
+for extra_dir in extra_dirs:
+    for dirname, dirs, files in walk(extra_dir):
+        for filename in files:
+            filename = path.join(dirname, filename)
+            if path.isfile(filename):
+                extra_files.append(filename)
 
 db.session.commit()
 if __name__ == "__main__":
     # app.run(debug=True)
     db.create_all()
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True, extra_files=extra_dirs)

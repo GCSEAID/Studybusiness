@@ -154,9 +154,9 @@ div.hero-body > h2.subtitle.is-spaced.center-align {
 .grid-container {
   display: inline-grid;
   text-align: left;
-  grid-template-columns: minmax(5rem, 40%) 1fr 1fr;
+  grid-template-columns: minmax(5rem, 100%) 1fr 1fr;
   padding: 1rem;
-  grid-gap: 1rem;
+  grid-gap: 5rem;
   /* box-shadow: -7px 5px 16px 0 #61e6ff; */
   /* border: 1px solid #b1b1b1; */
   background: #fdffff;

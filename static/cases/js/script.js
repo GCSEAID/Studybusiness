@@ -5,7 +5,7 @@ var ans = document.getElementsByClassName("question")
 var urlSearchParams = new URLSearchParams(window.location.search);
 var params = Object.fromEntries(urlSearchParams.entries());
 var url = `${window.location.protocol}//${window.location.host}${window.location.pathname}${window.location.search}&`
-var notif = document.getElementById("notif");
+var notif = document.querySelector("#notif");
 
 // async function handleData() {
     // var requrl = `${window.location.protocol}//${window.location.host}/static/cases/js/test.json`;
@@ -72,6 +72,7 @@ function save() {
         // console.log(url)
         navigator.clipboard.writeText(url);
 
+        console.log(notif)
         notif.classList.remove("hidden")
         setTimeout(() => notif.classList.add("hidden"), 1500);
     }

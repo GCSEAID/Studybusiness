@@ -10,18 +10,22 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <!-- == Fontawesome 5 == -->
-    <link rel="shortcut icon" href="https://raw.githubusercontent.com/GCSEAID/Studybusiness/dev/website/static/public/images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon"
+        href="https://raw.githubusercontent.com/GCSEAID/Studybusiness/dev/website/static/public/images/logo.png"
+        type="image/x-icon">
     <!--end of Meta data -->
-    
-  
-<!--Navigation bar-->
+
+
+    <!--Navigation bar-->
     <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item noselect" href="/">
-                    <img class="nodrag nav-logo" src="https://raw.githubusercontent.com/GCSEAID/Studybusiness/dev/static/public/images/logotext.png" draggable="false">
+                    <img class="nodrag nav-logo"
+                        src="https://raw.githubusercontent.com/GCSEAID/Studybusiness/dev/static/public/images/logotext.png"
+                        draggable="false">
                 </a>
-    
+
                 <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
                     data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
@@ -29,33 +33,36 @@
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-    
+
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
                     <a href="/" class="navbar-item">
                         Home
                     </a>
-                
+
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a href="business" class="navbar-link">
                             Business
                         </a>
                         <div class="navbar-dropdown">
-                                <div class="dropdown-trigger navbar-item">
-                                    <a href="cases" class="navbar-item">Cases</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
-                                </div>  
-                                <div class="dropdown-trigger navbar-item">
-                                    <a href="definitions" class="navbar-item">Definitions</a><i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
-                                </div>
+                            <div class="dropdown-trigger navbar-item">
+                                <a href="cases" class="navbar-item">Cases</a><i class="nav-chev fas fa-chevron-right"
+                                    aria-hidden="true"></i>
+                            </div>
+                            <div class="dropdown-trigger navbar-item">
+                                <a href="definitions" class="navbar-item">Definitions</a><i
+                                    class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+                            </div>
 
-                </div>  </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
     </nav>
-    
 
-<!--end of Navigation bar-->
-    
+
+    <!--end of Navigation bar-->
+
 
 
 </head>
@@ -88,16 +95,16 @@
                             <li class="grid-item grid-item-li">Cases Studies with questions</li>
                         </ul>
                     </div>
-    <!--                   <div class="aboutus">
+                    <!--                   <div class="aboutus">
                          <h1 class="grid-item grid-item-title">Who are we?</h1>
                         <ul class="grid-item grid-item-ul">
                         <p>We are students who are here to provide free resources to ensure your success.</p>
                     </ul>
                     </div> -->
-                    </div>
                 </div>
-            </div>    
+            </div>
         </div>
+    </div>
     </section>
 
 
@@ -107,14 +114,22 @@
             r.classList.toggle("is-active"), e.classList.toggle("is-active")
         }
     </script> -->
-    <script>Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"),0).forEach((function(r){r.addEventListener("click",(function(){var e=document.getElementById(r.dataset.target);r.classList.toggle("is-active"),e.classList.toggle("is-active")}))}));       </script>
-    
+    <script>
+        Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0).forEach((function (r) {
+            r.addEventListener("click", (function () {
+                var e = document.getElementById(r.dataset.target);
+                r.classList.toggle("is-active"), e.classList.toggle("is-active")
+            }))
+        }));
+    </script>
+
     <!-- Hero footer: will stick at the bottom -->
     <footer class="footer">
         <div class="content has-text-centered">
             <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
         </div>
     </footer>
-    
+
 </body>
+
 </html>
