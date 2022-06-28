@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Page Not Found – StudyBusiness</title>
+    {% include './layout/headerData.html' %}
+    {% include './layout/navbar.html' %}
+</head>
+
+<body>
+    <div class="is-medium is-bold">
+        <div class="home_content">
+            <h1 class="fr-1 title is-spaced center-align">
+                Page Not Found
+            </h1>
+            <h2 class="subtitle is-spaced center-align">
+                The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+            </h2>
+
+     
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <script>
+        Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0).forEach((function (r) {
+            r.addEventListener("click", (function () {
+                var e = document.getElementById(r.dataset.target);
+                r.classList.toggle("is-active"), e.classList.toggle("is-active")
+            }))
+        }));
+    </script>
+
+    <!-- Hero footer: will stick at the bottom -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
+        </div>
+    </footer>
+
+</body>
+
+</html>

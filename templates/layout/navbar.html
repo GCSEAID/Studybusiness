@@ -1,0 +1,43 @@
+ <!-- Navigation bar-->
+ <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item noselect" href="/">
+				<img class="nodrag nav-logo"
+					src="{{ url_for('static', filename='public/images/Logotext.png') }}"
+					draggable="false">
+			</a>
+
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+				data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				<a href="/" class="navbar-item">
+					Home
+				</a>
+
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a href="/business" class="navbar-link">
+						Business
+					</a>
+					<div class="navbar-dropdown">
+						<a href="/cases" class="dropdown-trigger navbar-item">
+							<span class="navbar-link-span">Cases</span>
+							<i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+						</a>
+						<a href="/definitions" class="dropdown-trigger navbar-item">
+							<span class="navbar-link-span">Definitions</span>
+							<i class="nav-chev fas fa-chevron-right" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+</nav>
+<!--end of Navigation bar-->

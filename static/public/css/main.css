@@ -1,16 +1,3 @@
-.is-collapsible {
-  overflow-y: hidden;
-  transition: height 0.2s ease;
-}
-.is-collapsible.is-active {
-  transition: height 0.2s ease;
-}
-.is-collapsible.message-body {
-  padding: 0 !important;
-}
-.is-collapsible.message-body .message-body-content {
-  padding: 1.25em 1.5em;
-}
 :root {
   --orange: #ff6100;
   --custom-white: #f9f9f9;
@@ -35,17 +22,22 @@ html {
   background-attachment: fixed !important;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   min-height: calc(100vh - 100px);
 }
 
-
 nav.navbar {
   background: var(--white) !important;
   background-color: var(--white) !important;
 }
+.navbar-link-span {
+  padding: 6px !important;
+  margin-left: 10px !important;
+}
+
 section {
   height: 5000px;
 }
@@ -107,11 +99,11 @@ footer.footer {
 } */
 footer,
 footer.footer {
-    position: fixed;
-    bottom:0;
-    width:100%;
-    padding: 1rem 1em 1rem;
-    /* height:60px;   Height of the footer */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 1em 1rem;
+  /* height:60px;   Height of the footer */
 }
 .nav-logo {
   width: 112px;
@@ -157,6 +149,8 @@ div.hero-body > h2.subtitle.is-spaced.center-align {
   grid-template-columns: minmax(5rem, 100%) 1fr 1fr;
   padding: 1rem;
   grid-gap: 5rem;
+  box-shadow: -7px 5px 16px 0px #71afbb;
+  margin-bottom: 2rem;
   /* box-shadow: -7px 5px 16px 0 #61e6ff; */
   /* border: 1px solid #b1b1b1; */
   background: #fdffff;
@@ -172,7 +166,6 @@ div.hero-body > h2.subtitle.is-spaced.center-align {
 .grid-item-title {
   font-size: calc(11px + (16 - 11) * (100vw - 400px) / (800 - 400)) !important;
   margin-bottom: 0;
-  
 }
 .f-16 {
   font-size: 16px !important;
@@ -287,7 +280,7 @@ a.navbar-item:hover {
 .def_emb {
   align-items: center;
   width: 80%;
-  height: 500px;   
+  height: 500px;
   padding: 1%;
 }
 
@@ -298,4 +291,18 @@ a.navbar-item:hover {
 
 .case_studies_template {
   padding-bottom: 100px;
+}
+
+.is-collapsible {
+  overflow-y: hidden;
+  transition: height 0.2s ease;
+}
+.is-collapsible.is-active {
+  transition: height 0.2s ease;
+}
+.is-collapsible.message-body {
+  padding: 0 !important;
+}
+.is-collapsible.message-body .message-body-content {
+  padding: 1.25em 1.5em;
 }

@@ -1,5 +1,6 @@
 import os
-from flask import (Flask, render_template, redirect)
+from tokenize import Number
+from flask import (Flask, render_template, redirect, url_for)
 from flask_cors import CORS
 # from Database_handler import Database_handler
 
@@ -48,17 +49,17 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/business')
+@app.route('/business/')
 def business():
     return render_template("business.html")
 
 
-@app.route('/definitions')
+@app.route('/business/definitions')
 def definitions():
     return render_template("definitions.html")
 
 
-@app.route('/cases')
+@app.route('/cases/')
 def cases():
     return render_template("cases.html", cases=case_studies.query.all())
 
@@ -67,22 +68,29 @@ def cases():
 # def template():
 #     return render_template("template.html", cases = case_studies.query.all())
 
-@app.route("/template/")
-def templateRedirect():
-  return redirect("/cases/")
-
-@app.route('/template/<id>')
-def templateSpecific(id):
+@app.route('/cases/<id>/')
+def casepecific(id):
+    # Todo> Implement the feature to detect if no case study exists then redirect to cases page if user tries to go to an id that doesnt exist
     caseStudyQuery = "SELECT * FROM case_studies WHERE id = " + id
     questionsQuery = "SELECT * FROM questions WHERE question_id = " + id
     caseData = db.session.execute(caseStudyQuery)
     questionsData = db.session.execute(questionsQuery)
-    return render_template('template.html', caseData=caseData, questionsData=questionsData)
+    dataExist = db.session.execute('SELECT id, title FROM case_studies WHERE id = ' + id).fetchone()
+    print(dataExist)
+    if dataExist is None: 
+        return redirect('/cases/')
+    return render_template('caseTemplate.html', caseData=caseData, questionsData=questionsData, dataExist=dataExist)
+        # return redirect("/cases")
 
 
-@app.route('/list')
+@app.route('/list/')
 def list():
     return render_template("list.html", values=questions.query.all())
+
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
 
 # Force Reloading of html files
 from os import path, walk

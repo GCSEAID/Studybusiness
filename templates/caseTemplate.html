@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Case Study - {{ dataExist[1].capitalize() }} </title>
+
+    {% include './layout/headerData.html' %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='public/css/accordion.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cases/css/style.css') }}">
+    <script src="{{ url_for('static', filename='public/js/accordion.js') }}"></script>
+    <script src="{{ url_for('static', filename='public/js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='cases/js/script.js') }}"></script>
+
+    {% include './layout/navbar.html' %}
+
+
+</head>
+
+<body onload="pageLoaded()">
+    <div style="padding-top:3rem; position: fixed;width: 50%;top: 0;left: 0;right: 0;margin: auto;">
+        <div id="notif" class="notification is-success center-align subtitle hidden" style="background: #2d3875;">
+            Copied your answers!</div>
+    </div>
+
+    {% for case in caseData %}
+    <div class="container mt-6 mb-6 case_studies_template" style="padding-bottom: 100px;">
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-parent">
+                <div class="tile is-child box">
+                    <p id="caseTitle" class="title f-2r">{{ case.title.capitalize() }} </p>
+
+                </div>
+                <div class="tile is-child box">
+                    <p id="caseDesc">{{ case.description }}
+                    </p>
+                </div>
+            </div>
+            <!--             <div class="tile box" style="width: 20%;height: 18rem;">
+                <img id="caseImage" src="static/public/images/placeholder.png" alt="Business Image">
+            </div> -->
+            <!-- <div class="tile is-parent">
+                <div class="tile is-child box">
+                    <p class="title f-2r">Chapters</p>
+                    <ul>
+                        <li><a href="/bussiness/chapters/1">Chapter 1</a></li>
+                </div>
+            </div> -->
+        </div>
+
+
+        <hr class="mt-6 has-background-dark">
+
+        <div class="tile is-ancestor mt-6">
+            <div class="tile is-vertical is-parent">
+                <div class="tile is-child box">
+                    <p id="caseQuestionsTitle" class="title f-2r">Questions for {{ case.title.capitalize() }}</p>
+                </div>
+                {% for questions in questionsData %}
+                 {% if 'Question ' in questions.question %}
+                    <div class="tile is-child box" id="duplicator">
+                    {% set questionlist = questions.question.split(":") %}
+                    <p><strong>{{ questions.question }}:</strong></p>
+                    <input class="input question mt-3" id="in_{{questionlist[0].split(' ')[1]}}" type="text" placeholder="Please type in your answer here">
+                </div>
+                {% else %}
+                <div id="noQuestionsMessageHolder" class="tile is-child box">
+                    <p id="noQuestionsMessage" class="title f-2r">No questions available in the database.</p>
+                </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+        
+
+        <div class="center-align">
+            <button class="button is-primary submit_button" style="font-weight: 500;" onclick="save()">Submit your answers!</button>
+        </div>
+    </div>
+    {% endfor %}
+
+    <script>
+        document.body.onload(makeAccWork());
+    </script>
+</body>
+<footer class="footer" onload="pageLoaded()">
+    <div class="content has-text-centered">
+        <span>Email: <a href="mailto:contact@studybusiness.info">contact@studybusiness.info</a></span>
+    </div>
+</footer>
+
+</html>
