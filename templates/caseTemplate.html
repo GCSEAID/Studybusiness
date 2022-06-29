@@ -53,22 +53,22 @@
 
         <div class="tile is-ancestor mt-6">
             <div class="tile is-vertical is-parent">
+                {% if questionExist[1].find("Question 1") == 0: %}
                 <div class="tile is-child box">
                     <p id="caseQuestionsTitle" class="title f-2r">Questions for {{ case.title.capitalize() }}</p>
                 </div>
                 {% for questions in questionsData %}
-                 {% if 'Question ' in questions.question %}
                     <div class="tile is-child box" id="duplicator">
                     {% set questionlist = questions.question.split(":") %}
                     <p><strong>{{ questions.question }}:</strong></p>
                     <input class="input question mt-3" id="in_{{questionlist[0].split(' ')[1]}}" type="text" placeholder="Please type in your answer here">
                 </div>
+                {% endfor %}
                 {% else %}
                 <div id="noQuestionsMessageHolder" class="tile is-child box">
                     <p id="noQuestionsMessage" class="title f-2r">No questions available in the database.</p>
                 </div>
                 {% endif %}
-            {% endfor %}
             </div>
         </div>
         

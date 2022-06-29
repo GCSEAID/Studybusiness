@@ -75,12 +75,11 @@ def casepecific(id):
     questionsQuery = "SELECT * FROM questions WHERE question_id = " + id
     caseData = db.session.execute(caseStudyQuery)
     questionsData = db.session.execute(questionsQuery)
-    dataExist = db.session.execute('SELECT id, title FROM case_studies WHERE id = ' + id).fetchone()
-    print(dataExist)
-    if dataExist is None: 
+    caseStudyExist = db.session.execute('SELECT id, title FROM case_studies WHERE id = ' + id).fetchone()
+    questionExist = db.session.execute('SELECT question_id, question FROM questions WHERE question_id = ' + id).fetchone()
+    if caseStudyExist is None: 
         return redirect('/cases/')
-    return render_template('caseTemplate.html', caseData=caseData, questionsData=questionsData, dataExist=dataExist)
-        # return redirect("/cases")
+    return render_template('caseTemplate.html', caseData=caseData, questionsData=questionsData, dataExist=caseStudyExist, questionExist=questionExist)
 
 
 @app.route('/list/')
